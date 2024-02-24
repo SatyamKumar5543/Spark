@@ -74,30 +74,34 @@ body {
     align-items: center;
     margin-bottom: 2rem;
 
-
-
-    & .title {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--theme-text-dark);
-    }
-
-    & .subtitle {
-      font-size: 0.875rem;
-      font-weight: 700;
-      color: var(--theme-text-light);
-    }
-
   }
 }
 
 .follower {
-  display:flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--theme-text-dark);
+  margin: 0; /* Reset default margin */
 }
 
 .login {
+  width: 60px;
   display: flex;
+  align-items: center;
 }
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--theme-text-light);
+}
+
 
 & .card-top {
   background-color: var(--theme-card-bg);

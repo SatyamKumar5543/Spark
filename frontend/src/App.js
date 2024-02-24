@@ -56,9 +56,8 @@ function App() {
               <div class="follower">
                 <h1 class="title">Social Media Dashboard</h1>
 
-                <div class="login">
-                  <FontAwesomeIcon icon={faCircleUser} style={{ color: "#f56a47", }} />
-                  <p class="subtitle">Login</p>
+                <div class>
+                  <FontAwesomeIcon icon={faCircleUser} style={{ color: "#f56a47", }} class = "login" />
                 </div>
               </div>
             </div>
