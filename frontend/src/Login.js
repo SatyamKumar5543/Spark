@@ -9,29 +9,35 @@ const Login = ({ onLogin }) => {
   const [error, setError] = useState('');
 
   const handleLogin = async () => {
-    axios.post('http://localhost:8000/api/authenticate/', { username, password })
-      .then(response => {
-        console.log(response.data);
-      })
-      .catch(error => {
-        console.error('Error authenticating:', error);
-      });
+    // try {
+    //   const response = await axios.post('http://localhost:8000/api/authenticate/', { username, password });
+    //   console.log(response.data.message); // Handle success message
+    //   onLogin(); // Call onLogin only if authentication is successful
+    // } catch (error) {
+    //   console.error('Error authenticating:', error);
+    //   setError('Invalid username or password'); // Set error message for display
+    // }
+
+
+    // try {
+    //   const response = await
+    //     fetch('http://localhost:8000/api/authenticate/',{
+    //       method: 'POST',
+    //       headers: {
+    //         'Content-Type': 'application/json',
+    //       },
+    //       body: JSON.stringify({ username, password }),
+    //     });
+    //   const data = await response.json();
+    //   console.log(data);
+    // }
+    // catch (error) {
+    //   console.error(error);
+    // }
+    onLogin && onLogin();
   };
 
   return (
-    // <div className="login-container">
-    //   <h2>Login</h2>
-    //   <label>
-    //     Username:
-    //     <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-    //   </label>
-    //   <label>
-    //     Password:
-    //     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-    //   </label>
-    //   <button onClick={handleLogin}>Login</button>
-    //   {error && <p className="error-message">{error}</p>}
-    // </div>
 
     <div class="container">
       <div class="form-section">
@@ -44,8 +50,8 @@ const Login = ({ onLogin }) => {
           <input type="password"
             value={password}
             class="password ele"
-            placeholder="password" 
-            onChange={(e) => setPassword(e.target.value)}/>
+            placeholder="password"
+            onChange={(e) => setPassword(e.target.value)} />
           <button class="clkbtn" onClick={handleLogin}>Login</button>
         </div>
       </div>

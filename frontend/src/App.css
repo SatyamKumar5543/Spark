@@ -92,15 +92,11 @@ body {
 }
 
 .follower {
-  order: 1;
-  /* Adjust the order to move it to the left */
+  display:flex;
 }
 
 .login {
-  order: 2;
-  /* Adjust the order to move it to the right */
   display: flex;
-  align-items: center;
 }
 
 & .card-top {

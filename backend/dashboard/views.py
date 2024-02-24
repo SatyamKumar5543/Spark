@@ -53,18 +53,18 @@ def authenticate_user(request):
         data = request.data
         username = data.get('username')
         password = data.get('password')
+        print(f"Received request for username: {username}, password: {password}")
 
         # Check username and password against your database
         mongo_client = get_mongo_client()
         db = mongo_client['Spark']
         user = db['user_data'].find_one({'username': username, 'password': password})
-        print(username,password)
         if user:
             print(f"User '{username}' authenticated successfully.")
             return JsonResponse({'message': 'Authentication successful'})
         else:
-            print(f"Authentication failed for user '{username}'.")
-            return JsonResponse({'message': 'Invalid username or password'}, status=403)
+            raise ValueError("Invalid username or password")
+            return JsonResponse({'error': 'Invalid username or password'}, status=403)
     except Exception as e:
         print("Error:", str(e))
         return JsonResponse({'error': str(e)}, status=500)

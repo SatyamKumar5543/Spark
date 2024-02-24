@@ -23,7 +23,7 @@ function App() {
         setTotalComments(response.data.total_comments);
         setTotalPosts(response.data.total_posts);
       } catch (error) {
-        console.error('Error fetching total likes:', error);
+        console.error('Error fetching total data:', error);
       }
     };
 
@@ -36,7 +36,6 @@ function App() {
       }
     };
 
-    fetchData();
     fetchPostAnalytics();
 
     if (isLoggedIn) {
@@ -47,7 +46,7 @@ function App() {
   const handleLogin = () => {
     setLoggedIn(true);
   };
-  
+
   return (
     <div className="App">
       {isLoggedIn ? (
@@ -56,11 +55,11 @@ function App() {
             <div class="top__section-header container">
               <div class="follower">
                 <h1 class="title">Social Media Dashboard</h1>
-                <p class="subtitle">Total Followers: 23,004</p>
-              </div>
-              <div class="login">
-                <FontAwesomeIcon icon={faCircleUser} style={{ color: "#f56a47", }} />
-                <p class="subtitle">Login</p>
+
+                <div class="login">
+                  <FontAwesomeIcon icon={faCircleUser} style={{ color: "#f56a47", }} />
+                  <p class="subtitle">Login</p>
+                </div>
               </div>
             </div>
 
