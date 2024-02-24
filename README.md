@@ -39,7 +39,10 @@ This is a Social Media Dashboard application built using React for the frontend 
 
     # Install backend dependencies
     cd ../backend
-    pip install -r requirements.txt
+    pip install Django
+    pip install djangorestframework
+    pip install pymongo
+
     ```
 
 3. Configure the MongoDB connection:
