@@ -26,8 +26,8 @@ This is a Social Media Dashboard application built using React for the frontend 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/social-media-dashboard.git
-    cd social-media-dashboard
+    git clone https://github.com/SatyamKumar5543/Spark.git
+    cd Spark
     ```
 
 2. Install dependencies:
